@@ -15,7 +15,7 @@ class SearchBar extends Component {
   handleChange(event) {
     this.setState({value: event.target.value});
   }
-
+ 
   handleSubmit(event) {
     event.preventDefault();
     console.log(this.state.value)
