@@ -1,4 +1,4 @@
-import { FETCH_EVENTS } from '../actions/index'
+import { FETCH_EVENTS } from '../actions/index';
 
 export default function(state = [], action) {
  
