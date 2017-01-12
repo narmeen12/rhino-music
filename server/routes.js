@@ -18,7 +18,8 @@ module.exports = function(app, passport) {
   app.post('/api/search', isLoggedIn, (req,res) => {
     let input = JSON.stringify(req.body.body); 
     request.get({
-      url: `https://api.spotify.com/v1/search?q=${input}&type=album`
+      url: `https://api.spotify.com/v1/search?q=${input}&type=album`,
+      limit: 50
     },
     function(error, response, body) {
       if (!error && response.statusCode === 200) {            
