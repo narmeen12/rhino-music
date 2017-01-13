@@ -16,10 +16,12 @@ import Paper from 'material-ui/Paper';
 
 
 const style = {
+  paper: {
   height: "auto",
   margin: 20,
   textAlign: 'center',
-  display: 'inline-block',
+  display: 'inline-block' 
+            },
   largeIcon: {
     width: 60,
     height: 60,
@@ -96,12 +98,12 @@ class UserPlaylists extends Component {
         }
         return (
           <TableRow key={songData.id}>
-            <TableRowColumn><p style={{ color: '#512DA8', fontFamily: 'Teko, cursive', fontSize: '22px' }}>{songData.song.artist}</p></TableRowColumn>
-            <TableRowColumn><img src={songData.song.image} /><p style={{ color: '#512DA8', fontFamily: 'Teko, cursive', fontSize: '26px' }}>{songData.song.album}</p></TableRowColumn>
-            <TableRowColumn>
+            <TableRowColumn style={{backgroundColor:'#EEEEEE', color: 'white'}}><p style={{ color: '#512DA8', fontFamily: 'Teko, cursive', fontSize: '22px' }}>{songData.song.artist}</p></TableRowColumn>
+            <TableRowColumn style={{backgroundColor:'#EEEEEE', color: 'white'}}><img src={songData.song.image} /><p style={{ color: '#512DA8', fontFamily: 'Teko, cursive', fontSize: '26px' }}>{songData.song.album}</p></TableRowColumn>
+            <TableRowColumn style={{backgroundColor:'#EEEEEE', color: 'white'}}>
               <PlayCircleFilled style={style.largeIcon}onClick={() => this.props.playSong(songData.song.uri)}>Play</PlayCircleFilled>
             </TableRowColumn>
-            <TableRowColumn>
+            <TableRowColumn style={{backgroundColor:'#EEEEEE', color: 'white'}}>
               <Remove style={style.largeIcon}onClick={()=>{this.deleteSong(this.playlistId, songData.id)}}></Remove>
             </TableRowColumn>
           </TableRow>
@@ -115,10 +117,10 @@ class UserPlaylists extends Component {
       return playlists.map((playlist) => {
         return (
           <TableRow displayBorder={true} key={playlist.id} onClick={() => { this.playlistId = playlist.id; this.playlistName= playlist.Name; this.renderSongs(this.props.getPlaylistSongs(playlist.Name))}}>
-            <TableRowColumn>
-              <Delete onClick={()=> { this.deletePlaylist(playlist.Name)}}></Delete>
+            <TableRowColumn style={{backgroundColor:'#EEEEEE', color: 'white'}}>
+              <Delete style={style.largeIcon} onClick={()=> { this.deletePlaylist(playlist.Name)}}></Delete>
             </TableRowColumn>
-            <TableRowColumn>
+            <TableRowColumn style={{backgroundColor:'#EEEEEE', color: 'white'}}>
               <p style={{ color: '#311B92', fontFamily: 'Teko, cursive', fontSize: '28px' }}>{playlist.Name} </p>
             </TableRowColumn>
           </TableRow>
@@ -129,7 +131,7 @@ class UserPlaylists extends Component {
 
   render() {
     return (
-    <Paper zDepth={1}>
+    <Paper style={style.paper} zDepth={5}>
       <Flexbox>
         <Table onCellClick={this.cellClicked} height={'500px'}>
         <TableBody displayRowCheckbox={false}>
