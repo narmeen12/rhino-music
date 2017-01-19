@@ -25,7 +25,6 @@ const style = {
     boxShadow: "10px 10px 5px #888888"
   }
 };
-// http://almende.github.io/chap-links-library/img/forkme_right_darkblue_121621.png
 
 export default class About extends Component {
   render() {
@@ -34,6 +33,8 @@ export default class About extends Component {
       <div>
       <Navigation />
         <MusicPlayer />
+<a href=""
+<img src="http://almende.github.io/chap-links-library/img/forkme_right_darkblue_121621.png"/>
   <center>
   <div>
       <h1 style={{ color: 'white', fontFamily: 'VT323, cursive', fontSize: '50px' }}> Welcome to <p style={{ color: '#37474F', fontFamily: 'Bungee Shade, cursive', fontSize: '50px' }}>Rhino Music</p> Take charge of your music experience!</h1>
@@ -98,6 +99,13 @@ export default class About extends Component {
     <Flexbox justifyContent='center'>
     <Paper zDepth={6} >
     <ListItem>
+    <a href="https://github.com/Recursion-Rhinos/rhino-music">
+<img src="http://www.coderefer.com/wp-content/uploads/2016/11/github_repo_img.png"/></a>
+<a class="github-button" href="https://github.com/Recursion-Rhinos/rhino-music" data-icon="octicon-star" data-style="mega" data-count-href="/Recursion-Rhinos/rhino-music/stargazers" data-count-api="/repos/Recursion-Rhinos/rhino-music#stargazers_count" data-count-aria-label="# stargazers on GitHub" aria-label="Star Recursion-Rhinos/rhino-music on GitHub">Star</a>
+
+<a class="github-button" href="https://github.com/Recursion-Rhinos/rhino-music/fork" data-icon="octicon-repo-forked" data-style="mega" data-count-href="/Recursion-Rhinos/rhino-music/network" data-count-api="/repos/Recursion-Rhinos/rhino-music#forks_count" data-count-aria-label="# forks on GitHub" aria-label="Fork Recursion-Rhinos/rhino-music on GitHub">Fork</a>
+
+<a class="github-button" href="https://github.com/Recursion-Rhinos/rhino-music/archive/master.zip" data-icon="octicon-cloud-download" data-style="mega" aria-label="Download Recursion-Rhinos/rhino-music on GitHub">Download</a>
       <img src="https://s27.postimg.org/lo3a4f6f7/Screen_Shot_2017_01_14_at_4_30_32_PM.png" />
     </ListItem>
     </Paper>
